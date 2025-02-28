@@ -113,7 +113,7 @@ while health > 0 and len(deck) > 0:
                 monster_damage = monster_strength - weapon_strength
                 health -= monster_damage
             if weapon_strength > monster_strength:
-                continue
+                pass
             del active_cards[choice - 1]
 
         if selection.lower() == "e":
