@@ -1,6 +1,7 @@
 from deck import Deck
 from deck import Card
 import os
+import sys
 
 scoundrel = Deck()
 deck = scoundrel.deck
@@ -70,10 +71,14 @@ while health > 0 and len(deck) > 0:
         print("D: Fight a Monster with your weapon")
         print("E: Run from Room")
         print("")
+        print(f"          ~ 'exit' to close ~")
         print(f"==========================================")
         print("")
 
         selection = str(input("> Enter here: "))
+
+        if selection.lower() == "exit":
+            sys.exit()
 
         if selection.lower() == "a":
             print("")
